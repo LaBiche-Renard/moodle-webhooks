@@ -195,7 +195,7 @@ class service_edit_form extends moodleform {
     public function get_data() {
         $data = parent::get_data();
 
-        if ($data === false) {
+        if ($data === false || !is_object($data)) {
             return $data;
         }
 
